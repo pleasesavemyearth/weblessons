@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color : rgb(124, 124, 124);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.dbg {
+  border: 1px dotted red;
+}
+
+.navbar {
+  margin-top:0.5em;
+  width: 100%;
+  height:50px;
+  overflow:hidden;
+}
+
+.navbar > .navbarleft {
+  float : left;
+  margin-left: 1em;
+  line-height: 48px;
+}
+.navbar > .navbaright {
+  float : right;
+  margin-right:1em;
+  line-height: 48px;
+  position: relative;
+}
+
+.navbar ul > li {
+  list-style-type: none;
+  float : left;
+  margin: 0 0.5em;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+#profileimg {
+  width: 48px;
+  height:48px;
+  border: 0px solid #000;
+  border-radius: 24px;
+}
+.wrapper {
+  height: calc(100vh - (13vh + 48px + 1.0em));
+  overflow:hidden;
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow:hidden;
+}
+
+.imglogo {
+  
+}
+footer {
+  bottom:0;
+  background-color: rgb(238, 238, 238);
+  height: 13vh;
+}
+.location {
+  padding: 1em;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.footmenu ul > li {
+  list-style-type: none;
+  float : left;
+  margin: 0 1.2em;
+}
+
+.footmenuleft {
+  float:left;
+  height: 6vh;
+}
+
+.footmenuright {
+  float:right;
+  height: 6vh;
+}
