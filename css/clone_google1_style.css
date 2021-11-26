@@ -44,6 +44,7 @@ li > a {
   border: 0px solid #000;
   border-radius: 24px;
 }
+
 .gb_app:hover {
   cursor: pointer;
   background-color: lightgray;
@@ -56,7 +57,7 @@ li > a {
   border-radius: 24px;
 }
 .wrapper {
-  height: calc(100vh - (13vh + 48px + 1em));
+  height: calc(100vh - (11vh + 48px + 1em));
   overflow: hidden;
   position: relative;
 }
@@ -74,8 +75,9 @@ li > a {
 footer {
   bottom: 0;
   background-color: rgb(238, 238, 238);
-  height: 13vh;
+  height: 11vh;
 }
+
 .location {
   padding: 1em;
   border-bottom: 1px solid rgb(200, 200, 200);
@@ -89,10 +91,12 @@ footer {
 
 .footmenuleft {
   float: left;
-  height: 6vh;
+  height: 4vh;
+  padding-top: 1em;
 }
 
 .footmenuright {
   float: right;
-  height: 6vh;
+  height: 4vh;
+  padding-top: 1em;
 }
