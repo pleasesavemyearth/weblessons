@@ -5,8 +5,9 @@
   color: rgb(124, 124, 124);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .dbg {
-  border: 1px dotted red;
+  border: 0px dotted red;
 }
 
 .navbar {
@@ -56,6 +57,7 @@ li > a {
   border: 0px solid #000;
   border-radius: 24px;
 }
+
 .wrapper {
   height: calc(100vh - (11vh + 48px + 1em));
   overflow: hidden;
@@ -63,6 +65,10 @@ li > a {
 }
 
 .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
   width: 800px;
   height: 100%;
   margin: 0 auto;
@@ -70,17 +76,67 @@ li > a {
   overflow: hidden;
 }
 
-.imglogo {
+.search {
+  width: 600px;
+  min-width: 400px;
+  max-width: 650px;
+  margin: 0 auto;
 }
+
+.searchbar {
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+.searchbar:hover {
+  box-shadow: 0 1px 6px rgb(33 33 33 / 28%);
+}
+
+.searchbar i {
+  width: 15px;
+  height: 15px;
+  color: #a5a5a5;
+}
+
+.searchbar input {
+  width: 90%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+}
+
+.search-buttons button {
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  color: #404040;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 10px 16px;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.offered-in {
+  margin-top: 50px;
+}
+
+button:hover {
+  background-color: #eeeeee;
+  border: 1px solid #cdcdcd;
+}
+
 footer {
   bottom: 0;
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee;
   height: 11vh;
 }
 
 .location {
   padding: 1em;
-  border-bottom: 1px solid rgb(200, 200, 200);
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .footmenu ul > li {
