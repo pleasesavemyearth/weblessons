@@ -134,11 +134,30 @@ main {
 }
 
 footer {
-  width: 100%;
-  position: absolute;
   bottom: 0;
-  background-color: lightgrey;
-  font-size: 14px;
-  color: black;
-  padding: 20px;
+  background-color: rgb(238, 238, 238);
+  height: 11vh;
+}
+
+.location {
+  padding: 1em;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.footmenu ul > li {
+  list-style-type: none;
+  float: left;
+  margin: 0 1.2em;
+}
+
+.footmenuleft {
+  float: left;
+  height: 4vh;
+  padding-top: 1em;
+}
+
+.footmenuright {
+  float: right;
+  height: 4vh;
+  padding-top: 1em;
 }
