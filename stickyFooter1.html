@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      height:100%;
+      box-sizing: border-box;
+    }
+
+    body {
+      height:100%;
+      background-color: #fff;
+      color: #333;
+      font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      /* display: flex;
+      flex-direction: column; */
+    }
+
+    .page-header,
+    .page-footer {
+      background-color: #5c5c5c;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .page-body {
+      height: 400px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="page-header">이 부분은 header 영역</header>
+    <article class="page-body">
+        <p>Main page content, add more if you want to see the footer push down.</p>
+    </article>
+    <footer class="page-footer">바닥으로 붙는 footer</footer>
+</div>
+
+</body>
+</html>
