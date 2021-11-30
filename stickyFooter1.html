@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+  바닥글 고정 패턴은 콘텐츠가 표시 영역 높이보다 짧은 경우 페이지 바닥글이 
+  표시 영역 하단에 "고정"되는 방법.
+  이 코드에서 바닥글 고정 패턴을 만드는 몇 가지 기술을 설명한다.
+
+  다음 요구 사항을 충족해야 함.
+  - 콘텐츠가 짧으면 바닥글이 뷰포트 하단에 고정
+  - 페이지의 콘텐츠가 뷰포트 하단을 지나 확장되면 바닥글은 정상적으로 콘텐츠 아래에 위치
+  
+  방법 1 : 
+  min-height: 100% 로 설정된 wrapper 사용.
+  <body> 에서 최소 높이를 100vh로 설정한 다음 grid container로 사용하여 전체페이지에서 
+  수행할 수도 있음.
+-->
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,9 +37,12 @@
     * {
       box-sizing: border-box;
     }
-
+    .dbg {
+      border: 1px dotted #f00;
+    }
+    
     .wrapper {
-      min-height: 100%;
+      min-height: 100%;  /* min-height : 100% */
       display: grid;
       grid-template-rows: auto 1fr auto;
       /* display: flex;
@@ -40,18 +57,18 @@
     }
 
     .page-body {
-      height: 400px;
+      height: auto;
     }
 
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="page-header">이 부분은 header 영역</header>
-    <article class="page-body">
+  <div class="wrapper dbg">
+    <header class="page-header dbg">이 부분은 header 영역</header>
+    <article class="page-body dbg">
         <p>Main page content, add more if you want to see the footer push down.</p>
     </article>
-    <footer class="page-footer">바닥으로 붙는 footer</footer>
+    <footer class="page-footer dbg">바닥으로 붙는 footer</footer>
 </div>
 
 </body>
