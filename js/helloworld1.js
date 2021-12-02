@@ -12,8 +12,6 @@
 
 // 엄격모드를 전체 스크립트에 적용하기 위해, 
 // 정확한 구문 "use strict";(또는 'use strict';) 을 다른 구문 작성 전에 삽입
-'use strict';
-console.log('hello world');
 let a;
 a = 6;
 
