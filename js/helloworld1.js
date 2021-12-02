@@ -1,4 +1,3 @@
 'use strict';
+// java script 출력문 1
 console.log('hello world');
-let a;
-a = 6;
