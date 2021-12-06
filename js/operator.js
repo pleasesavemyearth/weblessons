@@ -83,3 +83,9 @@ console.log(name === 'john' ? 'yes' : 'no');
 // do { } while(조건비교);
 // for loop, for(begin;condition;step) { }
 // nested loops
+
+
+
+function(a, b) {
+  return a - b;
+}
