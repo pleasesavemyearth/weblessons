@@ -9,11 +9,14 @@
     $result = mysqli_query( $conn, $sql );
     while ( $row = mysqli_fetch_array( $result ) ) {
       $encrypted_password = $row['userpwd'];
+      // $encrypted_password = password_hash($row['userpwd'], PASSWORD_DEFAULT);
     }
     if ( is_null( $encrypted_password ) ) {
       $wu = 1;
     } else {
-      if ( password_verify( $password, $encrypted_password ) ) {
+      
+      if ( $password == $encrypted_password ) {
+      // if ( password_verify( $password, $encrypted_password ) ) {
         header( 'Location: login-ok.php' );
       } else {
         $wp = 1;
