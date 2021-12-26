@@ -17,8 +17,8 @@
 -->
 <?php
 $servername = "localhost";
-$username = "webdb";
-$password = "webdb";
+$username = "webapp";
+$password = "webapp";
 $dbname = "webdb";
 
 // Create connection
