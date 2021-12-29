@@ -51,7 +51,7 @@
       //   echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td>".$row['cellphone']."</td><td>".$row['email']."</td><td>".$row['registdate']."</td><td>".$row['lastdate']."</td><td>".$row['status']."</td><td><a href='oo_user_update.html?id=".$row['id']."'>수정</a></td><td><a href='oo_user_deleteprocess.php?id=".$row['id']."'>삭제</a></td></tr>";
       // }
       $row = $resultset->fetch_assoc();
-      echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td>".$row['cellphone']."</td><td>".$row['email']."</td><td>".$row['registdate']."</td><td>".$row['lastdate']."</td><td>".$row['status']."</td><td><a href='oo_user_update.html?id=".$row['id']."'>수정</a></td><td><a href='oo_user_deleteprocess.php?id=".$row['id']."'>삭제</a></td></tr>";
+      echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td>".$row['cellphone']."</td><td>".$row['email']."</td><td>".$row['registdate']."</td><td>".$row['lastdate']."</td><td>".$row['status']."</td><td><a href='oo_user_update.php?id=".$row['id']."'>수정</a></td><td><a href='oo_user_deleteprocess.php?id=".$row['id']."'>삭제</a></td></tr>";
       echo "</table>";
     }
   ?>

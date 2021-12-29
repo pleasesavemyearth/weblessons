@@ -38,6 +38,7 @@
   const SELECT_FAIL = '데이터 조회에 실패하였습니다.';
   const UPDATE_SUCCESS = '데이터를 성공적으로 갱신하였습니다.';
   const UPDATE_FAIL = '데이터 갱신에 실패하였습니다.';
+  const INVALID_USER = '수정하고자 하는 사용자 계정을 한번 더 확인해주세요 ';
   const DELETE_SUCCESS = '데이터를 성공적으로 삭제하였습니다.';
   const DELETE_FAIL = '데이터 삭제에 실패하였습니다.';
 
