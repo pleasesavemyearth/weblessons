@@ -43,11 +43,11 @@
 
     if($resultset->num_rows > 0) {
       // echo "<table><tr><th>ID</th><th>USERNAME</th><th>CellPhone</th><th>E-Mail</th><th>Regist Date</th><th>Last Login</th><th>Status</th></tr>";
-      echo "<table><tr><th>ID</th><th>USERNAME</th></tr>";
+      echo "<table><tr><th>ID</th><th>USERNAME</th><th>작업내용</th></tr>";
       // out data of each row
       while( $row = $resultset->fetch_assoc() ) {
         // echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td>".$row['cellphone']."</td><td>".$row['email']."</td><td>".$row['registdate']."</td><td>".$row['lastdate']."</td><td>".$row['status']."</td><td><a href='oo_user_detailview.html?id=".$row['id']."'>상세정보확인</a></tr>";
-        echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td><a href='oo_user_detailview.php?id=".$row['id']."'>상세정보확인</a></tr>";
+        echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td><a href='oo_user_detailview.php?id=".$row['id']."'>상세정보확인</a></td></tr>";
       }
       echo "</table>";
     }
