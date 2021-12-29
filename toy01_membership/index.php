@@ -8,10 +8,11 @@
 </head>
 <body>
   <h1>Toy Project 1. Membership Management</h1>
-  <h4>Edited by swcodingschool, Dev. 2021</h4>
+  <h4>Edited by swcodingschool, Dec. 2021</h4>
   <hr>
   이 모의 프로젝트는 PHP와 MySQL을 이용 회원 관리 애플리케이션을 구현한다.<br>
-  PHP와 MySQL 인터페이스는 <b>MySQLi Object-Oriented</b> 방법을 사용한다.
+  PHP와 MySQL 인터페이스는 <b>MySQLi Object-Oriented</b> 방법을 사용한다.<br>
+
   <h2>기능 리스트</h2>
   <ol>
     <li>사용자에 의한 회원 가입</li>
@@ -26,6 +27,11 @@
   </ol>
    
   <h2>작업 단계</h2>
+  <p style="color:red;font-size:1.2em;">
+  먼저, oo_int_createdb.php, adbconfig.php 2개 파일을 오픈하여 앞 부분의 $toyappname을 임의의 값으로 입력한다.<br>
+  초기값은 toyproj라고 되어있으나 입력하는대로 데이터베이스이름 및 사용자 계정을 생성할 수 있다.<br>
+  단, 두 개 파일모두 같은 값이어야 한다.<br>
+  </p>
   <ol>
     <li>데이터베이스생성(oo_init_createdb.php 파일 참조) </li>
         DBMS 시스템과의 연결, Database(toymembership) 생성하는 시스템 초기화 기능. 

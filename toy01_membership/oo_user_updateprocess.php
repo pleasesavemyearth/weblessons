@@ -20,17 +20,21 @@
   $email = $_POST['email'];
   
   // create connection
-  $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
+  // get connection 하는 코드를 adbconfig로 이동하며... 
+  // 아래 코드는 일단 코멘트 처리함. 2021-12-29 by swcodingschool
+  //================  여기부터 ============================================
+  // $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 
-  // check connection : 연결 확인, 오류가 있으면 메시지 출력 후 프로세스 정료
-  if($conn->connect_error) {
-    echo outmsg(DBCONN_FAIL);
-    die("연결실패 :".$conn->connect_error);
-  }else {
-    if(DBG) echo outmsg(DBCONN_SUCCESS);
-  }
-  
-    // 업데이트 처리를 위한 prepared sql 구성 및 bind
+  // // check connection : 연결 확인, 오류가 있으면 메시지 출력 후 프로세스 정료
+  // if($conn->connect_error) {
+  //   echo outmsg(DBCONN_FAIL);
+  //   die("연결실패 :".$conn->connect_error);
+  // }else {
+  //   if(DBG) echo outmsg(DBCONN_SUCCESS);
+  // }
+  //================  여기까지 ============================================
+
+  // 업데이트 처리를 위한 prepared sql 구성 및 bind
   $stmt = $conn->prepare("UPDATE users SET cellphone = ?, email = ? WHERE id = ?" );
   $stmt->bind_param("sss", $cellphone, $email, $id);
   $stmt->execute();
