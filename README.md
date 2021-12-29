@@ -1,9 +1,6 @@
 # Membership Management.
-
-## Toy Project #1.
-
+### Toy Project #1.
 ### Full Stack Developer Training Course, Nov. 2021
-
 ###### 이 페이지는 2021년 11월 풀스택개발자 과정 수강생의 웹프로그래밍 실습을 위한 페이지입니다.
 
 ---
