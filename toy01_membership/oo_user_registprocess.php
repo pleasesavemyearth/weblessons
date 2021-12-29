@@ -25,7 +25,7 @@
   if($passwd != $cpasswd){  // password & cpassword is differenct
     if(DBG) echo outmsg(DIFF_PASSWD);
     header('Location: oo_user_registform.html');
-  }
+  }else {
   // 단계 2. 정규식 적용,FORM VALIDATION 작업 진행
 
   
@@ -63,6 +63,7 @@
     $stmt->bind_param("ssss", $username,$passwd, $cellphone, $email);
     $stmt->execute();
   }
+}
   // 데이터베이스 연결 인터페이스 리소스를 반납한다.
   $conn->close();
 

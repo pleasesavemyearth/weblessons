@@ -28,7 +28,7 @@
     if(DBG) echo outmsg(DBCONN_SUCCESS);
   }
   
-  // 동일 아이디 존재 여부 확인을 위한 질의 구성
+  // 사용자 계정 존재 여부 확인을 위한 질의 구성
   $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? and passwd = sha2(?,256)");
   $stmt->bind_param("ss", $username,$passwd);
 
@@ -41,14 +41,10 @@
     $conn->close();
     header('Location: oo_user_loginsuccess.php');
   }else{
-    echo outmsg(LOGIN_SUCESS);
+    echo outmsg(LOGIN_FAIL);
     $conn->close();
-    header('Location: oo_user_registform.html');
+    header('Location: index.php');
   }
   
-  // 데이터베이스 연결 인터페이스 리소스를 반납한다.
-  $conn->close();
-
-  // 프로세스 플로우를 인덱스 페이지로 돌려준다.
-  header('Location: index.php');
+  
 ?>

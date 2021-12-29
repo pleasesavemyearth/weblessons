@@ -1,5 +1,5 @@
-<<!-- 
-  파일명 : oo_init_createdb.php
+<!-- 
+  파일명 : oo_init_createtbl.php
   최초작업자 : swcodingschool
   최초작성일자 : 2021-12-28
   업데이트일자 : 2021-12-28
@@ -9,7 +9,7 @@
   이 코드는 납품시 최초 1 회 실행하며, 백업에 대한 고려는 하지 않았다.
 
   테이블 구성 : 
-  CREATE TABLE `toymembership`.`users` ( `id` INT(6) NOT NULL AUTO_INCREMENT , `username` VARCHAR(20) UNIQUE NOT NULL COMMENT 'user account' , `password` VARCHAR(256) NOT NULL COMMENT 'user password' , `cellphone` VARCHAR(13) NOT NULL COMMENT 'phone number' , `email` VARCHAR(50) NOT NULL COMMENT 'mail address' , `registdate` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'registration date' , `lastdate` DATETIME NULL COMMENT 'last login date' , `status` INT NULL DEFAULT '0' COMMENT 'activity status' , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci COMMENT = 'users registration table';
+  CREATE TABLE `toymembership`.`users` ( `id` INT(6) NOT NULL AUTO_INCREMENT , `username` VARCHAR(20) UNIQUE NOT NULL COMMENT 'user account' , `passwd` VARCHAR(256) NOT NULL COMMENT 'user password' , `cellphone` VARCHAR(13) NOT NULL COMMENT 'phone number' , `email` VARCHAR(50) NOT NULL COMMENT 'mail address' , `registdate` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'registration date' , `lastdate` DATETIME NULL COMMENT 'last login date' , `status` INT NULL DEFAULT '0' COMMENT 'activity status' , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci COMMENT = 'users registration table';
 -->
 
 <?php
@@ -32,7 +32,7 @@
     if(DBG) echo outmsg(DROPTBL_SUCCESS);
   }
 
-  // 데이터베이스를 생성한다.
+  // 테이블을 생성한다.
   $sql = "CREATE TABLE `toymembership`.`users` (
      `id` INT(6) NOT NULL AUTO_INCREMENT , 
      `username` VARCHAR(20) UNIQUE NOT NULL COMMENT 'user account' , 
