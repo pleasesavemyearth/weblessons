@@ -8,14 +8,14 @@
   시스템 환경 설정 변수
   시스템내 각 코드들이 메시지 출력을 좀더 단순하게 하도록 메시지 내용을 정의하고
   메시지출력용 함수를 정의함.
-  이 코드는 단 한번만 adbconfig를 통해 단 한번만 include 되도록 하여야 
+  이 코드는 adbconfig를 통해 단 한번만 include 되도록 하여야 
   const의 중복 정의로 인한 오류를 피할 수 있다.
 -->
 
 <?php
 
 // 개발단계 디버그 모드 
-  const DBG = TRUE;  // 개발 중 DBG 모드일 때 TRUE, 운영 시 FALSE로 토글시킨다
+  const DBG = FALSE;  // 개발 중 DBG 모드일 때 TRUE, 운영 시 FALSE로 토글시킨다
 
   // 메시지 출력을 위한 const 선언
   // 메시지 출력시 뉴라인 처리
@@ -41,6 +41,7 @@
   const INVALID_USER = '수정하고자 하는 사용자 계정을 한번 더 확인해주세요 ';
   const DELETE_SUCCESS = '데이터를 성공적으로 삭제하였습니다.';
   const DELETE_FAIL = '데이터 삭제에 실패하였습니다.';
+  const COMMIT_CODE = '코드를 모두 실행하였습니다.';
 
   // form validation 시 사용 메시지
   const FILL_USERNAME = '사용자 아이디를 적어주세요.';

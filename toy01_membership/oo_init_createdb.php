@@ -15,7 +15,7 @@ $dbusername = 'root';  // 현재 DBMS에 root계정을 이용하여 접속한다
 $dbpassword = '';  // 현재 DBMS root 계정의 패스워드를 적는다.
 $dbname = 'toymembership';
 
-require "./asysconfig.php";
+require_once "asysconfig.php";
 
 // create connection
 $conn = new mysqli($dbservername, $dbusername, $dbpassword);
@@ -49,6 +49,10 @@ if ($conn->query($sql) == TRUE) {
 // 데이터베이스 연결 인터페이스 리소스를 반납한다.
 $conn->close();
 
+// 코드 완료 메시지 출력
+if(DBG) echo outmsg(COMMIT_CODE);
+
 // 프로세스 플로우를 인덱스 페이지로 돌려준다.
-header('Location: index.php');
+// header('Location: index.php');
+echo "<a href='./index.php'>return to back</a>";
 ?>
