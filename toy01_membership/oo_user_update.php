@@ -41,9 +41,10 @@
 <body>
     <h1>사용자 정보 수정</h1>
     <form action="oo_user_updateprocess.php" method="POST">
+    <input type="hidden" name="id" value="<?=$id?>" />
     <label>사용자 아이디 : </label><input type="text" name="username" value="<?=$username?>" readonly /><br>
-    <label>비밀번호 : </label><input type="password" name="passwd" required /><br><a href="">비밀번호수정</a>
-    <label>비밀번호(확인) : </label><input type="password" name="cpasswd" required /><br>
+    <label>비밀번호 : </label><input type="password" name="passwd" /><br><a href="">비밀번호수정</a>
+    <label>비밀번호(확인) : </label><input type="password" name="cpasswd" /><br>
     <label>전화번호 : </label><input type="text" name="cellphone" value="<?=$cellphone?>" required /><br>
     <label>E-Mail : </label><input type="text" name="email" value="<?=$email?>" required /><br>
     <br>

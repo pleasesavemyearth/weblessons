@@ -1,4 +1,4 @@
-<<!-- 
+<!-- 
   파일명 : oo_user_regist_process.php
   최초작업자 : swcodingschool
   최초작성일자 : 2021-12-28
