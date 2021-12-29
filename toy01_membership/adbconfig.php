@@ -10,10 +10,10 @@
   동작하도록 구성하여야 한다.
 -->
 <?php
-  $dbservername = 'localhost'; // 개발 및 테스트 환경에서는 localhost를 전제로 한다.
-  $dbusername = 'root';  // 현재 DBMS에 root계정을 이용하여 접속한다.
-  $dbpassword = '';  // 현재 DBMS root 계정의 패스워드를 적는다.
-  $dbname = 'toymembership';
-  
-  require_once "asysconfig.php"; // 시스템 관리를 위한 각종 환경 변수 및 메시지 처리
+$dbservername = 'localhost'; // 개발 및 테스트 환경에서는 localhost를 전제로 한다.
+$dbusername = 'toymembership';  // 현재 DBMS에 root계정을 이용하여 접속한다.
+$dbpassword = 'toymembership';  // 현재 DBMS root 계정의 패스워드를 적는다.
+$dbname = 'toymembership';
+
+require_once "asysconfig.php"; // 시스템 관리를 위한 각종 환경 변수 및 메시지 처리
 ?>
