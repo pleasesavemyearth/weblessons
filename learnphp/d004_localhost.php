@@ -9,6 +9,6 @@
   $mysqli = new mysqli("localhost", "webapp", "webapp", "webdb");
   echo $mysqli->host_info .'<br>';
   
-  $mysqli = new mysqli("127.0.0.1", "webapp", "webapp", "webdb", 3307);
+  $mysqli = new mysqli("127.0.0.1", "webapp", "webapp", "webdb", 3306);
   echo $mysqli->host_info . '<br>';
 ?>
