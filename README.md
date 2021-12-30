@@ -28,13 +28,13 @@
 ### Ⅲ. 제약사항
 
 1. PHP와 MySQL 연동은 MySQLi Object Oriented
+2. Core code withoud styling sheet
 
 
 ### Ⅳ. Release Notes
 1. v0.1(2021-12-28)  
 1.1 시스템 설치용 데이터베이스 생성, 테이블생성 기능  
 1.2 데이터 추가, 데이터 조회, 데이터 갱신, 데이터 삭제 기능  
-1.3 Core code withoud styling sheet
 1. v0.2(2021-12-29)  
 1.1 시스템 설치용 데이터베이스 생성시 애플리케이션용 계정 생성 추가, 애플리케이션 이름 지정 사용
 
