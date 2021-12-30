@@ -36,5 +36,4 @@ if ($conn->connect_error) {
 } else {
   if (DBG) echo outmsg(DBCONN_SUCCESS);
 }
-
 ?>
