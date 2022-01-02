@@ -1,5 +1,5 @@
 <!-- 
-  파일명 : user_loginsuccess.php
+  파일명 : user_list.php
   최초작업자 : swcodingschool
   최초작성일자 : 2021-12-28
   업데이트일자 : 2021-12-28
@@ -11,6 +11,10 @@
 <?php
 // db연결 준비
 require "./adbconfig.php";
+
+// 로그인한 상태일 때만 이 페이지 내용을 확인할 수 있다.
+require_once 'b_loginchk.php';
+if($chk_login){
 ?>
 
 <!DOCTYPE html>
@@ -42,5 +46,10 @@ require "./adbconfig.php";
   ?>
   <a href="./index.php">인덱스페이지로</a>
 </body>
-
+<?php 
+}else {
+  echo outmsg(LOGIN_NEED);
+  echo "<a href='./index.php'>인덱스페이지로</a>";
+}
+?>
 </html>

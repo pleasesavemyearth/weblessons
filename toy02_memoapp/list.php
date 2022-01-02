@@ -5,7 +5,8 @@ Last Updated : 2021-12-30
 Code by swcodingschool
 
 Function :
-- list the memoid,  
+- list the memoid,  memotitle and memoregistdate
+- and show the link to make a new memo
 -->
 
 <!DOCTYPE html>
@@ -18,10 +19,6 @@ Function :
 </head>
 <body>
     <h1>list page</h1>
-    <form action="#" method="POST" id="myform">
-        <label>item : </label><input type="text" name="item1" /><br><br><br>
-        <input type="submit">
-        <button onclick="document.getElementById('myform').reset();">RESET</button>
-    </form>
+    
 </body>
 </html>

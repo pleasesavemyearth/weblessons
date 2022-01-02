@@ -1,20 +1,17 @@
-<!-- 
-  파일명 : asysconfig.php
-  최초작업자 : swcodingschool
-  최초작성일자 : 2021-12-28
-  업데이트일자 : 2021-12-28
+<!----------------------------------------------------------------------------- 
+  파일명 : autility.php
+  최초작성자 : swcodingschool
+  최초작성일 : 2021-12-30
+  업데이트일 : 2021-12-30
   
   기능: 
-  시스템 환경 설정 변수
-  시스템내 각 코드들이 메시지 출력을 좀더 단순하게 하도록 메시지 내용을 정의하고
-  메시지출력용 함수를 정의함.
-  이 코드는 adbconfig를 통해 단 한번만 include 되도록 하여야 
-  const의 중복 정의로 인한 오류를 피할 수 있다.
--->
-
+  DBMS 시스템 접속용 기본 정보 선언.
+  실제 애플리케이션 제작에서는 클라이언트 사이트의 환경,
+  즉, DBMS의 종류별 configuration 정보를 참조하여 구성함.
+------------------------------------------------------------------------------>
 <?php
 // 개발단계 디버그 모드 
-const DBG = TRUE;  // 개발 중 DBG 모드일 때 TRUE, 운영 시 FALSE로 토글시킨다
+const DBG = TRUE;  // DBG모드시 TRUE, 운영모드시 FALSE
 
 // 메시지 출력을 위한 const 선언
 // 시스템 초기화시 사용 메시지
@@ -29,13 +26,15 @@ const CREATEDB_FAIL = '데이터베이스 생성에 실패하였습니다.';
 const CREATEUSER_SUCCESS = '애플리케이션용 계정을 성공적으로 생성하였습니다.';
 const CREATEUSER_FAIL = '애플리케이션용 계정 생성에 실패하였습니다.';
 const LIMITRSC_SUCCESS = '리소스 제한을 성공적으로 처리하였습니다.';
-const LIMITRSC_FAIL = '리소스 제한을 처리에 실패하였습니다.';
+const LIMITRSC_FAIL = '리소스 제한 처리에 실패하였습니다.';
 const GRANTUSER_SUCCESS = '데이터베이스에 대한 권한부여에 성공하였습니다.';
 const GRANTUSER_FAIL = '데이터베이스에 대한 권한부여에 실패하였습니다.';
 const CREATETBL_SUCCESS = '테이블을 성공적으로 생성하였습니다.';
 const CREATETBL_FAIL = '테이블 생성에 실패하였습니다.';
 const DROPTBL_SUCCESS = '기존 테이블을 성공적으로 삭제하였습니다.';
 const DROPTBL_FAIL = '기존 테이블 삭제에 실패하였습니다.';
+
+// 데이터 조작과정, 즉 insert, select, update, delete시 사용 메시지
 const INSERT_SUCCESS = '데이터를 성공적으로 추가하였습니다.';
 const INSERT_FAIL = '데이터 추가에 실패하였습니다.';
 const SELECT_SUCCESS = '데이터를 성공적으로 조회하였습니다.';
@@ -54,41 +53,15 @@ const FILL_CPASSWD = '비밀번호(확인)을 적어주세요.';
 const FILL_CELLPHONE = '전화번호를 적어주세요.';
 const FILL_EMAIL = '이메일주소를 적어주세요.';
 const DIFF_PASSWD = '비밀번호가 확인용 비밀번호와 다릅니다.';
-const EXIST_USERNAME = '존재하는 아이디입니다.';
+const EXIST_USERNAME = '이미 존재하는 사용자 아이디입니다.\n다른 아이디를 생각해보세요.';
 
 // 로그인 성공 삭제
 const LOGIN_SUCCESS = '로그인에 성공하였습니다.';
 const LOGIN_FAIL = '로그인에 실패하였습니다.';
 
-// SESSION 관리
-const SESSION_START = '로그인 관리를 위한 세션관리를 시작하였습니다.';
-const SESSION_CREATE = '세션 변수를 생성하였습니다.';
-const SESSION_DELETE = '로그인 관리를 종료하고 세션을 삭제하였습니다.';
-const LOGIN_NEED = '로그인이 필요한 페이지입니다.';
-
-// 팝업창 형태의 알림 메시지 출력용 함수 정의
+// 팝업창 형태의 알림 메시지 출력 함수 정의
 function outmsg($msg)
 {
-  return "<script>alert('" . $msg . "')</script>";
-}
-
-// 사용자 ip를 가져오는 함수 생성
-function get_client_ip() {
-  $ipaddress = '';
-  if (getenv('HTTP_CLIENT_IP'))
-      $ipaddress = getenv('HTTP_CLIENT_IP');
-  else if(getenv('HTTP_X_FORWARDED_FOR'))
-      $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-  else if(getenv('HTTP_X_FORWARDED'))
-      $ipaddress = getenv('HTTP_X_FORWARDED');
-  else if(getenv('HTTP_FORWARDED_FOR'))
-      $ipaddress = getenv('HTTP_FORWARDED_FOR');
-  else if(getenv('HTTP_FORWARDED'))
-      $ipaddress = getenv('HTTP_FORWARDED');
-  else if(getenv('REMOTE_ADDR'))
-      $ipaddress = getenv('REMOTE_ADDR');
-  else
-      $ipaddress = 'UNKNOWN';
-  return $ipaddress;
+  return "<script>alert('".$msg."')</script>";
 }
 ?>
